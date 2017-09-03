@@ -1,9 +1,7 @@
 # earthquakeGeoms
 
 
-To address these questions, we gathered some data: we counted the
-number of snacks of each flavor in each package in one box. (It turned
-out that there were _81_ packages rather than 80 in our box.)
+Temp Readme
 
 - [CSV file of the data](Data/fruit_snacks.csv)
 - [Photo gallery](PhotoGallery.md)
