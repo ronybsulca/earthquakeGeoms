@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Rony Sulca (ronybsulca@berkeley.edu)
 Maintainer: Rony Sulca <ronybsulca@berkeley.edu>
 Description: eathquakeGeoms includes a variety of functions to help clean and display the 
-    eathquakes in the NOAA data frame (National Oceanic and Atmospheric Administration).
+    eathquakes in the NOAA data frame (National Centers for Environmental Information).
       To clean the dataset, use 'eq_loaction_clean' and 'eq_clean_data'. To analyze the data,
     use the new geom 'GeomTimeline', through its calling function 'geom_timeline'. To see the location
     of the earquakes through properly annotated circles in a leaflet map, use 'eq_map' and 'eq_create_label'.
