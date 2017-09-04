@@ -32,7 +32,9 @@ the rigth-most string). Finally, the strings are titled, that is, only the initi
 remain lowercase (for each word).
 
 ```{r, echo = FALSE}
-library(earthquakeGeoms)
+if (require(earthquakeGeoms)){
+  library(earthquakeGeoms)
+}
 ```
 
 ```{r, warning=FALSE}
