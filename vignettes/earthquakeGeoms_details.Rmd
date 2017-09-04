@@ -39,19 +39,21 @@ if (require(earthquakeGeoms)){
 ```
 
 ```{r, warning=FALSE}
-if (require(earthquakeGeoms)){
-test_dataframe = data.frame(order = 1:10,
-                            LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
-                                              "CUBA: HABANA", "SRI LANKA: IslanD",
-                                              "EU: SPain: unknown", "US: Maine",
-                                              "US: California: Los Angeles", " Ecuador: Bogota",
-                                              "Ivory COAST: ISLAND 3", "China: HONG KONG"),
-                            stringsAsFactors = F)
-
-test_dataframe = eq_location_clean(test_dataframe)
-
-test_dataframe
-}
+#if (require(earthquakeGeoms)){
+  
+  test_dataframe = data.frame(order = 1:10,
+                              LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
+                                                "CUBA: HABANA", "SRI LANKA: IslanD",
+                                                "EU: SPain: unknown", "US: Maine",
+                                                "US: California: Los Angeles", " Ecuador: Bogota",
+                                                "Ivory COAST: ISLAND 3", "China: HONG KONG"),
+                              stringsAsFactors = F)
+  
+  test_dataframe = eq_location_clean(test_dataframe)
+  
+  test_dataframe
+  
+#}
 ```
 
 ### eq_clean_data
@@ -64,22 +66,24 @@ converting them to Date type.
 
 ```{r}
 if (require(earthquakeGeoms)){
-test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
-                                              "CUBA: HABANA", "SRI LANKA: IslanD",
-                                              "EU: SPain: unknown", "US: Maine",
-                                              "US: California: Los Angeles"),
-                            YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
-                            MONTH = c(NA,3,NA,1,9,6,5),
-                            DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
-                            DEATHS = c(NA,1,2,8,33,NA,NA),
-                            TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
-                            stringsAsFactors = F)
-
-test_dataframe = eq_clean_data(test_dataframe) # Calling the function
-
-test_dataframe
+  
+  test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
+                                                "CUBA: HABANA", "SRI LANKA: IslanD",
+                                                "EU: SPain: unknown", "US: Maine",
+                                                "US: California: Los Angeles"),
+                              YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
+                              MONTH = c(NA,3,NA,1,9,6,5),
+                              DAY = c(NA,NA,1,4,NA,2,NA),
+                              LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                              LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                              DEATHS = c(NA,1,2,8,33,NA,NA),
+                              TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
+                              stringsAsFactors = F)
+  
+  test_dataframe = eq_clean_data(test_dataframe) # Calling the function
+  
+  test_dataframe
+  
 }
 ```
 
@@ -101,28 +105,30 @@ the data points points will be grouped into n(y) groups, each displaying its own
 
 ```{r, fig.width=7.2, fig.height=3}
 if (require(earthquakeGeoms)){
-test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
-                                              "CUBA: HABANA", "SRI LANKA: IslanD",
-                                              "EU: SPain: unknown", "US: Maine",
-                                              "US: California: Los Angeles"),
-                            YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
-                            MONTH = c(NA,3,NA,1,9,6,5),
-                            DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
-                            DEATHS = c(NA,1,2,8,33,NA,NA),
-                            TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
-                            EQ_PRIMARY = c(3.6, 4.4,6.5, 2.7, 5.5, 6.3, 7.4),
-                            stringsAsFactors = F)
-test_dataframe = eq_clean_data(test_dataframe)
-
-ggplot2::ggplot(test_dataframe, ggplot2::aes(DATE,
-                                      colour = TOTAL_DEATHS,
-                                      size = as.numeric(EQ_PRIMARY) )) +
-  geom_timeline() +
-  ggplot2::guides(size = ggplot2::guide_legend(title = "Ritcher scale value")) +
-  ggplot2::scale_colour_continuous(name = "# of DEATHS") +
-  ggplot2::theme_classic()
+  
+  test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
+                                                "CUBA: HABANA", "SRI LANKA: IslanD",
+                                                "EU: SPain: unknown", "US: Maine",
+                                                "US: California: Los Angeles"),
+                              YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
+                              MONTH = c(NA,3,NA,1,9,6,5),
+                              DAY = c(NA,NA,1,4,NA,2,NA),
+                              LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                              LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                              DEATHS = c(NA,1,2,8,33,NA,NA),
+                              TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
+                              EQ_PRIMARY = c(3.6, 4.4,6.5, 2.7, 5.5, 6.3, 7.4),
+                              stringsAsFactors = F)
+  test_dataframe = eq_clean_data(test_dataframe)
+  
+  ggplot2::ggplot(test_dataframe, ggplot2::aes(DATE,
+                                        colour = TOTAL_DEATHS,
+                                        size = as.numeric(EQ_PRIMARY) )) +
+    geom_timeline() +
+    ggplot2::guides(size = ggplot2::guide_legend(title = "Ritcher scale value")) +
+    ggplot2::scale_colour_continuous(name = "# of DEATHS") +
+    ggplot2::theme_classic()
+  
 }
 ```
 
@@ -138,14 +144,16 @@ ggplot2::ggplot(test_dataframe, ggplot2::aes(DATE,
 
 ```{r, fig.width=7.2, fig.height=3}
 if (require(earthquakeGeoms)){
-ggplot2::ggplot(test_dataframe, ggplot2::aes(DATE,
-                                      colour = TOTAL_DEATHS,
-                                      size = as.numeric(EQ_PRIMARY) )) +
-  geom_timeline() +
-  geom_timeline_label(ggplot2::aes(label = test_dataframe$LOCATION_NAME)) + # Labeling
-  ggplot2::guides(size = ggplot2::guide_legend(title = "Ritcher scale value")) +
-  ggplot2::scale_colour_continuous(name = "# of DEATHS") +
-  ggplot2::theme_classic()
+  
+  ggplot2::ggplot(test_dataframe, ggplot2::aes(DATE,
+                                        colour = TOTAL_DEATHS,
+                                        size = as.numeric(EQ_PRIMARY) )) +
+    geom_timeline() +
+    geom_timeline_label(ggplot2::aes(label = test_dataframe$LOCATION_NAME)) + # Labeling
+    ggplot2::guides(size = ggplot2::guide_legend(title = "Ritcher scale value")) +
+    ggplot2::scale_colour_continuous(name = "# of DEATHS") +
+    ggplot2::theme_classic()
+  
 }
 ```
 
@@ -160,28 +168,30 @@ The following 2 functions were built to display the earthquake data by their geo
 
 ```{r, fig.width=7.2, fig.height=3}
 if (require(earthquakeGeoms)){
-## Data Setup
-
-test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
-                                              "CUBA: HABANA", "SRI LANKA: IslanD",
-                                              "EU: SPain: unknown", "US: Maine",
-                                              "US: California: Los Angeles"),
-                            YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
-                            MONTH = c(NA,3,NA,1,9,6,5),
-                            DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
-                            DEATHS = c(NA,1,2,8,33,NA,NA),
-                            TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
-                            EQ_PRIMARY = c("3.6", "4.4","6.5", "2.7", "5.5", "6.3", "7.4"),
-                            stringsAsFactors = F)
-test_dataframe = eq_clean_data(test_dataframe)
-
-## Function Call
-
-m = eq_clean_data(test_dataframe)
-
-eq_map(m, annot_col = "DATE")
+  
+  ## Data Setup
+  
+  test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
+                                                "CUBA: HABANA", "SRI LANKA: IslanD",
+                                                "EU: SPain: unknown", "US: Maine",
+                                                "US: California: Los Angeles"),
+                              YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
+                              MONTH = c(NA,3,NA,1,9,6,5),
+                              DAY = c(NA,NA,1,4,NA,2,NA),
+                              LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                              LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                              DEATHS = c(NA,1,2,8,33,NA,NA),
+                              TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
+                              EQ_PRIMARY = c("3.6", "4.4","6.5", "2.7", "5.5", "6.3", "7.4"),
+                              stringsAsFactors = F)
+  test_dataframe = eq_clean_data(test_dataframe)
+  
+  ## Function Call
+  
+  m = eq_clean_data(test_dataframe)
+  
+  eq_map(m, annot_col = "DATE")
+  
 }
 ```
 
@@ -192,11 +202,13 @@ eq_map(m, annot_col = "DATE")
 
 ```{r, fig.width=7.2, fig.height=3}
 if (require(earthquakeGeoms)){
-## Function Call 
-
-m$popup_text = eq_create_label(m) # Creating the Labels
-
-eq_map(m, annot_col = "popup_text")
+  
+  ## Function Call 
+  
+  m$popup_text = eq_create_label(m) # Creating the Labels
+  
+  eq_map(m, annot_col = "popup_text")
+  
 }
 ```
 
