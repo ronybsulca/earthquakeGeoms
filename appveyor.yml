@@ -43,3 +43,6 @@ artifacts:
 
   - path: '\*_*.zip'
     name: Bits
+
+
+_R_CHECK_FORCE_SUGGESTS_: 0
