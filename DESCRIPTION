@@ -23,4 +23,4 @@ Suggests: knitr,
     testthat,
     earthquakeGeoms
 VignetteBuilder: knitr
-_R_CHECK_FORCE_SUGGESTS_:false
+_R_CHECK_FORCE_SUGGESTS_:0
