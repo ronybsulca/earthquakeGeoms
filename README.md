@@ -8,7 +8,7 @@ The package `earthquakeGeoms` has been built to clean and display the [earthquak
 Information).
 
 
-The Package consists of the functions:
+**The Package consists of the functions**:
 
 - [eq_location_clean](R/eq_location_clean.R) -- Cleans the locations of the earthquake dataset.
 - [eq_clean_data](R/eq_clean_data.R) -- Cleans the entire dataset to make it compatible with the other functions.
@@ -19,7 +19,7 @@ The Package consists of the functions:
 
 
 
-Additional Index:
+**Additional Index**:
 
 - [Vignette describing how to use the package](vignettes/earthquakeGeoms_details.Rmd)
 - [NAMESPACE dependencies](NAMESPACE)
