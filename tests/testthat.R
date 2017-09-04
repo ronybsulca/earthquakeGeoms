@@ -1,4 +1,4 @@
 library(testthat)
-library(eathquakeGeoms)
+library(earthquakeGeoms)
 
-test_check("eathquakeGeoms")
+test_check("earthquakeGeoms")
