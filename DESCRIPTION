@@ -20,6 +20,5 @@ LazyData: true
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown,
-    testthat,
-    earthquakeGeoms
+    testthat
 VignetteBuilder: knitr
