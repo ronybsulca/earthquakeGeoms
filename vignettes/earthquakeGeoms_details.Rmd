@@ -3,8 +3,9 @@ title: "earthquakeGeoms"
 author: "Rony Sulca"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
+always_allow_html: yes
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{earthquakeGeoms}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

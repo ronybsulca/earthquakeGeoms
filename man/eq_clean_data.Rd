@@ -10,7 +10,7 @@ eq_clean_data(dset)
 \item{dset}{Dataset depicting the raw NOAA data frame.}
 }
 \value{
-This function returns a dataframe with the cleaned NOAA data frame.
+This function returns a dataframe with the NOAA data frame cleaned.
 }
 \description{
 This function returns the raw NOAA data frame with a new \code{DATE} column (of class date) added
