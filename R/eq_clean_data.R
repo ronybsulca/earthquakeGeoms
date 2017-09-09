@@ -11,7 +11,7 @@
 #' @importFrom dplyr filter
 #' @importFrom dplyr %>%
 #'
-#' @return This function returns a dataframe with the cleaned NOAA data frame.
+#' @return This function returns a dataframe with the NOAA data frame cleaned.
 #'
 #' @examples
 #'
