@@ -28,6 +28,8 @@ the strings is selected ( the rigth-most string). Finally, the strings
 are titled, that is, only the initial letter is uppercase while the rest
 remain lowercase (for each word).
 
+    ## Loading required package: earthquakeGeoms
+
     ## Data Setup
 
     test_dataframe = data.frame(order = 1:10,
@@ -205,6 +207,10 @@ will be displayed as circles in the map. The second argument,
 `annot_col` decides which column in the dataset will be used as the
 pop-up annotation of the leaflet map.
 
+**Note: Leaflet Maps may not display in some browsers. To visualize the
+results of the leaflet map functions (in vignettes), download the
+package and knit the vignette (or preview the html file) in RStudio.**
+
     ## Data Setup
 
     test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
@@ -230,7 +236,7 @@ pop-up annotation of the leaflet map.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-e9e5ac9ddba8ca14de62">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2150-01-01","2000-01-01","1999-01-04","1566-06-02","1450-05-01"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-685106aedf6f0861073b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2150-01-01","2000-01-01","1999-01-04","1566-06-02","1450-05-01"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 ### eq\_create\_label
 
@@ -251,5 +257,5 @@ is skipped in the html string.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-0146c4706a3f77bdde19">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:\u003c/b> Lima <br/> <b>Magnitude:\u003c/b> 3.6 <br/>"," <b>Location:\u003c/b> Habana <br/> <b>Magnitude:\u003c/b> 6.5 <br/>"," <b>Location:\u003c/b> Island <br/> <b>Magnitude:\u003c/b> 2.7 <br/> <b>Total deaths:\u003c/b> 9"," <b>Location:\u003c/b> Maine <br/> <b>Magnitude:\u003c/b> 6.3 <br/> <b>Total deaths:\u003c/b> 25"," <b>Location:\u003c/b> Los Angeles <br/> <b>Magnitude:\u003c/b> 7.4 <br/>"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-27cf908fb11c3cf4799d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Lima <br/> <b>Magnitude:<\/b> 3.6 <br/>"," <b>Location:<\/b> Habana <br/> <b>Magnitude:<\/b> 6.5 <br/>"," <b>Location:<\/b> Island <br/> <b>Magnitude:<\/b> 2.7 <br/> <b>Total deaths:<\/b> 9"," <b>Location:<\/b> Maine <br/> <b>Magnitude:<\/b> 6.3 <br/> <b>Total deaths:<\/b> 25"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/>"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
