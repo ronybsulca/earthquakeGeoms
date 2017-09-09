@@ -10,6 +10,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
 The package `earthquakeGeoms` has been built to clean and display the earthquake data from NOAA (The National Centers for Environmental
 Information). The dataset can be found here: https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1
 
@@ -173,6 +174,8 @@ The following 2 functions were built to display the earthquake data by their geo
 
 `eq_map` is a function that displays the data points in the input `data` argument, based on its LATITUDE and LONGITUDE columns. The data points will be displayed as circles in the map. The second argument, `annot_col` decides which column in the dataset will be used as the pop-up annotation of the leaflet map.
 
+
+**Note: Leaflet Maps may not display in some browsers. To visualize the results of the leaflet map functions (in vignettes), download the package and knit the vignette (or preview the html file) in RStudio.**
 ```{r, fig.width=7.2, fig.height=3}
 
 ## Data Setup
