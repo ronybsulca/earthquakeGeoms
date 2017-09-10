@@ -72,7 +72,6 @@ converting them to Date type.
 
 ## Data Setup
 
-## The locations and coordinates are random (not actual lat and long)
 test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                               "CUBA: HABANA", "SRI LANKA: IslanD",
                                               "EU: SPain: unknown", "US: Maine",
@@ -80,8 +79,8 @@ test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                             YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                             MONTH = c(NA,3,NA,1,9,6,5),
                             DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
+                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
                             DEATHS = c(NA,1,2,8,33,NA,NA),
                             TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                             stringsAsFactors = F)
@@ -114,8 +113,6 @@ the data points points will be grouped into n(y) groups, each displaying its own
 
 ## Data Setup
 
-
-## The locations and coordinates are random (not actual lat and long)
 test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                               "CUBA: HABANA", "SRI LANKA: IslanD",
                                               "EU: SPain: unknown", "US: Maine",
@@ -123,8 +120,8 @@ test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                             YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                             MONTH = c(NA,3,NA,1,9,6,5),
                             DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
+                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
                             DEATHS = c(NA,1,2,8,33,NA,NA),
                             TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                             EQ_PRIMARY = c(3.6, 4.4,6.5, 2.7, 5.5, 6.3, 7.4),
@@ -183,6 +180,8 @@ The following 2 functions were built to display the earthquake data by their geo
 
 ## Data Setup
 
+
+## The locations and coordinates are random (not actual lat and long)
 test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                               "CUBA: HABANA", "SRI LANKA: IslanD",
                                               "EU: SPain: unknown", "US: Maine",
@@ -190,8 +189,8 @@ test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                             YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                             MONTH = c(NA,3,NA,1,9,6,5),
                             DAY = c(NA,NA,1,4,NA,2,NA),
-                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                            LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
+                            LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
                             DEATHS = c(NA,1,2,8,33,NA,NA),
                             TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                             EQ_PRIMARY = c("3.6", "4.4","6.5", "2.7", "5.5", "6.3", "7.4"),
@@ -217,6 +216,8 @@ eq_map(m, annot_col = "DATE")
 
 m$popup_text = eq_create_label(m) # Creating the Labels
 
+
+## The locations and coordinates are random (not actual lat and long)
 eq_map(m, annot_col = "popup_text")
 
 ```

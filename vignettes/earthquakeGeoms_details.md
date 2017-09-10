@@ -28,6 +28,8 @@ the strings is selected ( the rigth-most string). Finally, the strings
 are titled, that is, only the initial letter is uppercase while the rest
 remain lowercase (for each word).
 
+    ## Loading required package: earthquakeGeoms
+
     ## Data Setup
 
     test_dataframe = data.frame(order = 1:10,
@@ -69,7 +71,6 @@ type.
 
     ## Data Setup
 
-    ## The locations and coordinates are random (not actual lat and long)
     test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                                   "CUBA: HABANA", "SRI LANKA: IslanD",
                                                   "EU: SPain: unknown", "US: Maine",
@@ -77,8 +78,8 @@ type.
                                 YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
+                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
                                 DEATHS = c(NA,1,2,8,33,NA,NA),
                                 TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                                 stringsAsFactors = F)
@@ -129,8 +130,6 @@ into n(y) groups, each displaying its own line of points.
 
     ## Data Setup
 
-
-    ## The locations and coordinates are random (not actual lat and long)
     test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                                   "CUBA: HABANA", "SRI LANKA: IslanD",
                                                   "EU: SPain: unknown", "US: Maine",
@@ -138,8 +137,8 @@ into n(y) groups, each displaying its own line of points.
                                 YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
+                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
+                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
                                 DEATHS = c(NA,1,2,8,33,NA,NA),
                                 TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                                 EQ_PRIMARY = c(3.6, 4.4,6.5, 2.7, 5.5, 6.3, 7.4),
@@ -214,6 +213,8 @@ package and knit the vignette (or preview the html file) in RStudio.**
 
     ## Data Setup
 
+
+    ## The locations and coordinates are random (not actual lat and long)
     test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
                                                   "CUBA: HABANA", "SRI LANKA: IslanD",
                                                   "EU: SPain: unknown", "US: Maine",
@@ -221,8 +222,8 @@ package and knit the vignette (or preview the html file) in RStudio.**
                                 YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
+                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
                                 DEATHS = c(NA,1,2,8,33,NA,NA),
                                 TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                                 EQ_PRIMARY = c("3.6", "4.4","6.5", "2.7", "5.5", "6.3", "7.4"),
@@ -237,7 +238,7 @@ package and knit the vignette (or preview the html file) in RStudio.**
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-c675bebe45692c415e97">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2150-01-01","2000-01-01","1999-01-04","1566-06-02","1450-05-01"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-db8068db3f6315d94246">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2150-01-01","2000-01-01","1999-01-04","1566-06-02","1450-05-01"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 ### eq\_create\_label
 
@@ -254,9 +255,11 @@ is skipped in the html string.
 
     m$popup_text = eq_create_label(m) # Creating the Labels
 
+
+    ## The locations and coordinates are random (not actual lat and long)
     eq_map(m, annot_col = "popup_text")
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-473a52ae5533f2c8007f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Lima <br/> <b>Magnitude:<\/b> 3.6 <br/>"," <b>Location:<\/b> Habana <br/> <b>Magnitude:<\/b> 6.5 <br/>"," <b>Location:<\/b> Island <br/> <b>Magnitude:<\/b> 2.7 <br/> <b>Total deaths:<\/b> 9"," <b>Location:<\/b> Maine <br/> <b>Magnitude:<\/b> 6.3 <br/> <b>Total deaths:<\/b> 25"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/>"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-8fc4157f74cf79b39330">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Lima <br/> <b>Magnitude:<\/b> 3.6 <br/>"," <b>Location:<\/b> Habana <br/> <b>Magnitude:<\/b> 6.5 <br/>"," <b>Location:<\/b> Island <br/> <b>Magnitude:<\/b> 2.7 <br/> <b>Total deaths:<\/b> 9"," <b>Location:<\/b> Maine <br/> <b>Magnitude:<\/b> 6.3 <br/> <b>Total deaths:<\/b> 25"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/>"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
