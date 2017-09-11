@@ -28,8 +28,6 @@ the strings is selected ( the rigth-most string). Finally, the strings
 are titled, that is, only the initial letter is uppercase while the rest
 remain lowercase (for each word).
 
-    ## Loading required package: earthquakeGeoms
-
     ## Data Setup
 
     test_dataframe = data.frame(order = 1:10,
@@ -78,8 +76,8 @@ type.
                                 YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                                LATITUDE = c(-12.5,20.2,34.1,8.567,36.5,46.975,34.262),
+                                LONGITUDE = c(-77,-103.5,-75.5,81.233,-4.4,-66.659,-118.002),
                                 DEATHS = c(NA,1,2,8,33,NA,NA),
                                 TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
                                 stringsAsFactors = F)
@@ -91,11 +89,11 @@ type.
     test_dataframe
 
     ##   LOCATION_NAME YEAR MONTH DAY LATITUDE LONGITUDE DEATHS TOTAL_DEATHS
-    ## 1          Lima 2150     1   1   31.100      35.5     NA           NA
-    ## 2        Habana 2000     1   1   35.683      35.8      2           NA
-    ## 3        Island 1999     1   4   34.100      43.2      8            9
-    ## 4         Maine 1566     6   2   31.500      35.3     NA           25
-    ## 5   Los Angeles 1450     5   1   35.500      25.5     NA           NA
+    ## 1          Lima 2150     1   1  -12.500   -77.000     NA           NA
+    ## 2        Habana 2000     1   1   34.100   -75.500      2           NA
+    ## 3        Island 1999     1   4    8.567    81.233      8            9
+    ## 4         Maine 1566     6   2   46.975   -66.659     NA           25
+    ## 5   Los Angeles 1450     5   1   34.262  -118.002     NA           NA
     ##         DATE
     ## 1 2150-01-01
     ## 2 2000-01-01
@@ -137,11 +135,11 @@ into n(y) groups, each displaying its own line of points.
                                 YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5),
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5),
+                                LATITUDE = c(-12.5,20.2,34.1,8.567,36.5,46.975,34.262),
+                                LONGITUDE = c(-77,-103.5,-75.5,81.233,-4.4,-66.659,-118.002),
                                 DEATHS = c(NA,1,2,8,33,NA,NA),
                                 TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
-                                EQ_PRIMARY = c(3.6, 4.4,6.5, 2.7, 5.5, 6.3, 7.4),
+                                EQ_PRIMARY = c(4.4,6.5, 8.1, 2.7, 5.5, 6.3, 7.4),
                                 stringsAsFactors = F)
     test_dataframe = eq_clean_data(test_dataframe)
 
@@ -214,19 +212,18 @@ package and knit the vignette (or preview the html file) in RStudio.**
     ## Data Setup
 
 
-    ## The locations and coordinates are random (not actual lat and long)
-    test_dataframe = data.frame(LOCATION_NAME = c("Peru: Lima", "Mexico: Tijuana",
-                                                  "CUBA: HABANA", "SRI LANKA: IslanD",
-                                                  "EU: SPain: unknown", "US: Maine",
+    ## This is test data (not actual NOAA Locations)
+    test_dataframe = data.frame(LOCATION_NAME = c("Mexico: Jalisco",
+                                                  "MEXICO:  OAXACA",
                                                   "US: California: Los Angeles"),
-                                YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
-                                MONTH = c(NA,3,NA,1,9,6,5),
-                                DAY = c(NA,NA,1,4,NA,2,NA),
-                                LATITUDE = c(31.1,38,35.683,34.1,36.4,31.5,35.5), ## These coordinates are for test (made up)
-                                LONGITUDE = c(35.5,58.2,35.8,43.2,25.4,35.3,25.5), ## These coordinates are for test (made up)
-                                DEATHS = c(NA,1,2,8,33,NA,NA),
-                                TOTAL_DEATHS = c(NA,1,NA,9,NA,25,NA),
-                                EQ_PRIMARY = c("3.6", "4.4","6.5", "2.7", "5.5", "6.3", "7.4"),
+                                YEAR = c(2000,1610,1450),
+                                MONTH = c(3,NA,5),
+                                DAY = c(1,4,NA),
+                                LATITUDE = c(20.2,17.0,34.262),
+                                LONGITUDE = c(-103.5,-96.3,-118.002),
+                                DEATHS = c(1,2,NA),
+                                TOTAL_DEATHS = c(1,NA,25),
+                                EQ_PRIMARY = c(6.5, 2.7, 7.4),
                                 stringsAsFactors = F)
     test_dataframe = eq_clean_data(test_dataframe)
 
@@ -238,7 +235,7 @@ package and knit the vignette (or preview the html file) in RStudio.**
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-db8068db3f6315d94246">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2150-01-01","2000-01-01","1999-01-04","1566-06-02","1450-05-01"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-a3c2bf38872ed469d28c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2000-03-01","1610-01-04","1450-05-01"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 ### eq\_create\_label
 
@@ -261,5 +258,5 @@ is skipped in the html string.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-8fc4157f74cf79b39330">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[31.1,35.683,34.1,31.5,35.5],[35.5,35.8,43.2,35.3,25.5],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Lima <br/> <b>Magnitude:<\/b> 3.6 <br/>"," <b>Location:<\/b> Habana <br/> <b>Magnitude:<\/b> 6.5 <br/>"," <b>Location:<\/b> Island <br/> <b>Magnitude:<\/b> 2.7 <br/> <b>Total deaths:<\/b> 9"," <b>Location:<\/b> Maine <br/> <b>Magnitude:<\/b> 6.3 <br/> <b>Total deaths:<\/b> 25"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/>"],null,null,null,null]}],"limits":{"lat":[31.1,35.683],"lng":[25.5,43.2]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1ed70409bf08f08d08e0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Jalisco <br/> <b>Magnitude:<\/b> 6.5 <br/> <b>Total deaths:<\/b> 1"," <b>Location:<\/b> Oaxaca <br/> <b>Magnitude:<\/b> 2.7 <br/>"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/> <b>Total deaths:<\/b> 25"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
