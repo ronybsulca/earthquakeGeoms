@@ -73,7 +73,7 @@ type.
                                                   "CUBA: HABANA", "SRI LANKA: IslanD",
                                                   "EU: SPain: unknown", "US: Maine",
                                                   "US: California: Los Angeles"),
-                                YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
+                                YEAR = c(2150,2030,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
                                 LATITUDE = c(-12.5,20.2,34.1,8.567,36.5,46.975,34.262),
@@ -90,16 +90,18 @@ type.
 
     ##   LOCATION_NAME YEAR MONTH DAY LATITUDE LONGITUDE DEATHS TOTAL_DEATHS
     ## 1          Lima 2150     1   1  -12.500   -77.000     NA           NA
-    ## 2        Habana 2000     1   1   34.100   -75.500      2           NA
-    ## 3        Island 1999     1   4    8.567    81.233      8            9
-    ## 4         Maine 1566     6   2   46.975   -66.659     NA           25
-    ## 5   Los Angeles 1450     5   1   34.262  -118.002     NA           NA
+    ## 2       Tijuana 2030     3   1   20.200  -103.500      1            1
+    ## 3        Habana 2000     1   1   34.100   -75.500      2           NA
+    ## 4        Island 1999     1   4    8.567    81.233      8            9
+    ## 5         Maine 1566     6   2   46.975   -66.659     NA           25
+    ## 6   Los Angeles 1450     5   1   34.262  -118.002     NA           NA
     ##         DATE
     ## 1 2150-01-01
-    ## 2 2000-01-01
-    ## 3 1999-01-04
-    ## 4 1566-06-02
-    ## 5 1450-05-01
+    ## 2 2030-03-01
+    ## 3 2000-01-01
+    ## 4 1999-01-04
+    ## 5 1566-06-02
+    ## 6 1450-05-01
 
 GeomTimeline & GeomTimelineLabel
 --------------------------------
@@ -132,7 +134,7 @@ into n(y) groups, each displaying its own line of points.
                                                   "CUBA: HABANA", "SRI LANKA: IslanD",
                                                   "EU: SPain: unknown", "US: Maine",
                                                   "US: California: Los Angeles"),
-                                YEAR = c(2150,-2000,2000,1999,-1610,1566,1450),
+                                YEAR = c(2150,2030,2000,1999,-1610,1566,1450),
                                 MONTH = c(NA,3,NA,1,9,6,5),
                                 DAY = c(NA,NA,1,4,NA,2,NA),
                                 LATITUDE = c(-12.5,20.2,34.1,8.567,36.5,46.975,34.262),
@@ -235,7 +237,7 @@ package and knit the vignette (or preview the html file) in RStudio.**
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-a3c2bf38872ed469d28c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2000-03-01","1610-01-04","1450-05-01"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-3dd9f24065a9d520a99c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,["2000-03-01","1610-01-04","1450-05-01"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
 ### eq\_create\_label
 
@@ -258,5 +260,5 @@ is skipped in the html string.
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-1ed70409bf08f08d08e0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Jalisco <br/> <b>Magnitude:<\/b> 6.5 <br/> <b>Total deaths:<\/b> 1"," <b>Location:<\/b> Oaxaca <br/> <b>Magnitude:<\/b> 2.7 <br/>"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/> <b>Total deaths:<\/b> 25"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-2742f1cbaad02e348438">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[20.2,17,34.262],[-103.5,-96.3,-118.002],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"dashArray":null},null,null,[" <b>Location:<\/b> Jalisco <br/> <b>Magnitude:<\/b> 6.5 <br/> <b>Total deaths:<\/b> 1"," <b>Location:<\/b> Oaxaca <br/> <b>Magnitude:<\/b> 2.7 <br/>"," <b>Location:<\/b> Los Angeles <br/> <b>Magnitude:<\/b> 7.4 <br/> <b>Total deaths:<\/b> 25"],null,null,null,null]}],"limits":{"lat":[17,34.262],"lng":[-118.002,-96.3]}},"evals":[],"jsHooks":[]}</script>
 <!--/html_preserve-->
